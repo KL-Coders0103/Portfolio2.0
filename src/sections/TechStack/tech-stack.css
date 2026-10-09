@@ -546,12 +546,12 @@
   height: 30px;
   object-fit: contain;
   color: currentColor;
-  filter: grayscale(1) brightness(1.35);
+  filter: brightness(0) invert(1);
   transition: filter 200ms ease, transform 200ms ease;
 }
 
 .technology-card:hover .technology-card__icon img {
-  filter: grayscale(0) brightness(1);
+  filter: brightness(0) saturate(100%) invert(49%) sepia(99%) saturate(3500%) hue-rotate(3deg) brightness(103%) contrast(103%);
   transform: scale(1.05);
 }
 
