@@ -40,7 +40,7 @@
 
   margin-inline: auto;
 
-  padding-top: 20px;
+  padding-top: var(--section-padding-y);
 }
 
 .case-study__back a {
@@ -92,7 +92,7 @@
 
   z-index: 4;
 
-  padding-top: 42px;
+  padding-top: var(--section-padding-y);
 }
 
 .case-study__eyebrow {
