@@ -54,7 +54,7 @@
 
   margin-inline: auto;
 
-  padding-top: 42px;
+  padding-top: var(--section-padding-y);
 
   display: grid;
 
