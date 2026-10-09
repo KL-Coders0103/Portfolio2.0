@@ -58,7 +58,7 @@
 
   z-index: 5;
 
-  padding-top: var(--section-padding-y);
+  padding-top: 0;
 }
 
 .metrics-eyebrow {
