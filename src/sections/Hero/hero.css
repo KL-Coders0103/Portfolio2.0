@@ -1,0 +1,1164 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: calc(100svh - 72px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(255, 107, 0, 0.07),
+      transparent 28%
+    ),
+    var(--background);
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    52px 52px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================================================
+   AMBIENT GLOW
+========================================================= */
+
+.hero-glow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: 12%;
+  right: 8%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.09),
+      transparent 65%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN HERO CONTAINER
+========================================================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    calc(100% - 120px),
+    1440px
+  );
+
+  margin: 0 auto;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(420px, 0.82fr)
+    minmax(650px, 1.18fr);
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding:
+    92px
+    0
+    55px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+
+  max-width: 650px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  margin-bottom: 34px;
+
+  color: var(--text-secondary);
+
+  font-family: var(--font-mono);
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+}
+
+.hero-eyebrow__line {
+  width: 34px;
+  height: 2px;
+
+  flex: 0 0 34px;
+
+  background: var(--accent);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--text-primary);
+
+  font-size: clamp(
+    64px,
+    5.7vw,
+    94px
+  );
+
+  font-weight: 800;
+
+  line-height: 0.91;
+
+  letter-spacing: -4px;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title__accent {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 610px;
+
+  margin:
+    34px
+    0
+    30px;
+
+  color: var(--text-secondary);
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  letter-spacing: -0.15px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-button {
+  min-height: 56px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  padding:
+    0
+    30px;
+
+  border-radius: 2px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button--primary {
+  background: var(--accent);
+
+  color: #fff;
+
+  box-shadow:
+    0 10px 35px
+    rgba(255, 107, 0, 0.15);
+}
+
+.hero-button--primary:hover {
+  background: var(--accent-light);
+
+  box-shadow:
+    0 14px 42px
+    rgba(255, 107, 0, 0.24);
+}
+
+.hero-button--secondary {
+  min-width: 160px;
+
+  border: 1px solid var(--border);
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  color: var(--text-primary);
+}
+
+.hero-button--secondary:hover {
+  border-color: var(--text-secondary);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  width: 100%;
+  height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   SYSTEM
+========================================================= */
+
+.hero-system {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 650px;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   SYSTEM GRID
+========================================================= */
+
+.system-grid {
+  position: absolute;
+  inset: 5% 2%;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 46px 46px;
+
+  opacity: 0.65;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 20%,
+      transparent 78%
+    );
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.system-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 410px;
+  height: 410px;
+
+  border: 1px solid
+    rgba(255, 107, 0, 0.42);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.system-orbit--one {
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg)
+    scaleX(1);
+}
+
+.system-orbit--two {
+  transform:
+    translate(-50%, -50%)
+    rotate(62deg)
+    scaleX(0.62);
+}
+
+.system-orbit--three {
+  transform:
+    translate(-50%, -50%)
+    rotate(-62deg)
+    scaleX(0.62);
+}
+
+
+/* =========================================================
+   GLOBE
+========================================================= */
+
+.system-globe {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 310px;
+  height: 310px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 107, 0, 0.2),
+      rgba(18, 18, 18, 0.9) 42%,
+      #050505 76%
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 70px
+    rgba(255, 107, 0, 0.14),
+
+    inset 0 0 70px
+    rgba(255, 107, 0, 0.08);
+
+  overflow: hidden;
+}
+
+.system-globe__glow {
+  position: absolute;
+
+  inset: 18%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.35),
+      transparent 68%
+    );
+
+  filter: blur(15px);
+}
+
+.system-globe__core {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.55) 1px,
+      transparent 1.5px
+    );
+
+  background-size:
+    13px 13px;
+
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   GLOBE LINES
+========================================================= */
+
+.globe-line {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.globe-line--1 {
+  width: 100%;
+  height: 42%;
+}
+
+.globe-line--2 {
+  width: 100%;
+  height: 62%;
+}
+
+.globe-line--3 {
+  width: 42%;
+  height: 100%;
+}
+
+.globe-line--4 {
+  width: 62%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   GLOBE NODES
+========================================================= */
+
+.globe-node {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 12px
+    rgba(255, 107, 0, 0.8);
+}
+
+.globe-node--1 {
+  left: 35%;
+  top: 28%;
+}
+
+.globe-node--2 {
+  right: 28%;
+  top: 38%;
+}
+
+.globe-node--3 {
+  left: 30%;
+  bottom: 29%;
+}
+
+.globe-node--4 {
+  right: 33%;
+  bottom: 24%;
+}
+
+
+/* =========================================================
+   SYSTEM CARDS
+========================================================= */
+
+.system-card {
+  position: absolute;
+
+  z-index: 5;
+
+  width: 198px;
+  min-height: 118px;
+
+  padding: 17px 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.17);
+
+  background:
+    rgba(12, 12, 12, 0.88);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.25);
+}
+
+.system-card__header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 12px;
+
+  color: var(--text-primary);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.system-card__icon {
+  color: var(--accent);
+
+  display: flex;
+}
+
+.system-card__technologies {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: var(--text-muted);
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+========================================================= */
+
+.system-card--web {
+  left: 7%;
+  top: 14%;
+}
+
+.system-card--mobile {
+  right: 4%;
+  top: 15%;
+}
+
+.system-card--backend {
+  left: 1%;
+  top: 45%;
+
+  transform: translateY(-50%);
+}
+
+.system-card--ai {
+  right: 0;
+  top: 45%;
+
+  transform: translateY(-50%);
+}
+
+.system-card--database {
+  left: 10%;
+  bottom: 8%;
+}
+
+.system-card--cloud {
+  right: 7%;
+  bottom: 8%;
+}
+
+
+/* =========================================================
+   CONNECTION POINTS
+========================================================= */
+
+.system-connection {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 12px
+    rgba(255, 107, 0, 0.85);
+}
+
+.system-connection--1 {
+  left: 36%;
+  top: 23%;
+}
+
+.system-connection--2 {
+  right: 35%;
+  top: 24%;
+}
+
+.system-connection--3 {
+  left: 32%;
+  top: 50%;
+}
+
+.system-connection--4 {
+  right: 32%;
+  top: 50%;
+}
+
+.system-connection--5 {
+  left: 38%;
+  bottom: 21%;
+}
+
+.system-connection--6 {
+  right: 37%;
+  bottom: 21%;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.hero-stats {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.hero-stat {
+  min-height: 88px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    0
+    clamp(28px, 5vw, 82px);
+
+  border-right:
+    1px solid var(--border);
+}
+
+.hero-stat:last-child {
+  border-right: 0;
+}
+
+.hero-stat__label {
+  margin-bottom: 8px;
+
+  color: var(--text-muted);
+
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.hero-stat__value {
+  color: var(--text-primary);
+
+  font-family: var(--font-mono);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .hero-container {
+    width: min(
+      calc(100% - 160px),
+      1540px
+    );
+  }
+
+  .hero-title {
+    font-size: 96px;
+  }
+
+  .hero-visual {
+    height: 680px;
+  }
+
+  .system-globe {
+    width: 340px;
+    height: 340px;
+  }
+
+  .system-orbit {
+    width: 450px;
+    height: 450px;
+  }
+
+  .system-card {
+    width: 210px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-container {
+    width: min(
+      calc(100% - 64px),
+      1100px
+    );
+
+    grid-template-columns:
+      minmax(360px, 0.8fr)
+      minmax(520px, 1.2fr);
+
+    gap: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(
+      54px,
+      6vw,
+      76px
+    );
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    height: 540px;
+  }
+
+  .system-globe {
+    width: 270px;
+    height: 270px;
+  }
+
+  .system-orbit {
+    width: 360px;
+    height: 360px;
+  }
+
+  .system-card {
+    width: 170px;
+
+    min-height: 105px;
+
+    padding: 14px;
+  }
+
+  .system-card--web {
+    left: 5%;
+  }
+
+  .system-card--mobile {
+    right: 1%;
+  }
+
+  .system-card--database {
+    left: 7%;
+  }
+
+  .system-card--cloud {
+    right: 4%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET STACK
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-container {
+    width: min(
+      calc(100% - 48px),
+      700px
+    );
+
+    grid-template-columns: 1fr;
+
+    padding:
+      100px
+      0
+      50px;
+  }
+
+  .hero-content {
+    max-width: 650px;
+
+    margin-inline: auto;
+
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: clamp(
+      54px,
+      10vw,
+      78px
+    );
+  }
+
+  .hero-description {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    height: 570px;
+
+    margin-top: 30px;
+  }
+
+  .hero-system {
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .hero-container {
+    width: calc(100% - 32px);
+
+    padding:
+      92px
+      0
+      35px;
+  }
+
+  .hero-title {
+    font-size: clamp(
+      46px,
+      13vw,
+      64px
+    );
+
+    letter-spacing: -2.5px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .hero-description {
+    margin-top: 26px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    max-width: 340px;
+
+    margin-inline: auto;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-visual {
+    height: 480px;
+
+    margin-top: 10px;
+  }
+
+  .system-globe {
+    width: 220px;
+    height: 220px;
+  }
+
+  .system-orbit {
+    width: 290px;
+    height: 290px;
+  }
+
+  .system-card {
+    width: 135px;
+
+    min-height: 90px;
+
+    padding: 11px;
+  }
+
+  .system-card__header {
+    font-size: 10px;
+
+    gap: 6px;
+
+    margin-bottom: 7px;
+  }
+
+  .system-card__header svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .system-card__technologies {
+    font-size: 7px;
+
+    gap: 3px;
+  }
+
+  .system-card--web {
+    left: 0;
+    top: 6%;
+  }
+
+  .system-card--mobile {
+    right: 0;
+    top: 6%;
+  }
+
+  .system-card--backend {
+    left: 0;
+    top: 48%;
+  }
+
+  .system-card--ai {
+    right: 0;
+    top: 48%;
+  }
+
+  .system-card--database {
+    left: 5%;
+    bottom: 2%;
+  }
+
+  .system-card--cloud {
+    right: 5%;
+    bottom: 2%;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stat {
+    min-height: 74px;
+
+    padding:
+      16px 24px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .hero-stat:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-title {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-visual {
+    height: 440px;
+  }
+
+  .system-globe {
+    width: 190px;
+    height: 190px;
+  }
+
+  .system-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .system-card {
+    width: 120px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation: none !important;
+  }
+}

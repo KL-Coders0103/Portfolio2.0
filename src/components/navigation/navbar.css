@@ -1,0 +1,449 @@
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  height: 72px;
+
+  background:
+    rgba(8, 8, 8, 0.94);
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.site-header__container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+
+  padding: 0 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo {
+  width: 232px;
+
+  flex: 0 0 232px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 38px;
+
+  border-right: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+
+  letter-spacing: -0.7px;
+}
+
+.site-logo__name {
+  color: var(--text-primary);
+}
+
+.site-logo__suffix {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-navigation {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 54px;
+  padding-right: 30px;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.desktop-navigation__links {
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+
+  gap: 42px;
+}
+
+.navigation-link {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  color: #d8d8d8;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.15px;
+
+  transition:
+    color 180ms ease;
+}
+
+.navigation-link::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 8px;
+
+  height: 1px;
+
+  background: var(--accent);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition:
+    transform 180ms ease;
+}
+
+.navigation-link:hover {
+  color: var(--text-primary);
+}
+
+.navigation-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   NAV ACTIONS
+========================================================= */
+
+.desktop-navigation__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   AVAILABILITY
+========================================================= */
+
+.desktop-navigation__actions
+.site-header .availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.navigation-contact {
+  min-width: 136px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.navigation-contact:hover {
+  background: var(--accent);
+  color: #ffffff;
+
+  box-shadow:
+    0 0 24px
+    rgba(255, 107, 0, 0.18);
+}
+
+.navigation-contact svg {
+  transition:
+    transform 180ms ease;
+}
+
+.navigation-contact:hover svg {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: auto 0 auto auto;
+
+  border: 1px solid var(--border);
+
+  border-radius: 4px;
+
+  background: var(--surface);
+
+  color: var(--text-primary);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation {
+  position: fixed;
+
+  top: 72px;
+  left: 0;
+  right: 0;
+
+  z-index: 999;
+
+  border-bottom: 1px solid var(--border);
+
+  background:
+    rgba(11, 11, 11, 0.98);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mobile-navigation nav {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.mobile-navigation nav > a {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid var(--border-subtle);
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mobile-navigation__availability {
+  padding: 22px 0;
+
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-navigation__contact {
+  min-height: 48px !important;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  border: 1px solid var(--accent) !important;
+
+  color: var(--accent) !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .site-header__container {
+    padding: 0 24px;
+  }
+
+  .site-logo {
+    width: 190px;
+    flex-basis: 190px;
+
+    padding-left: 20px;
+
+    font-size: 22px;
+  }
+
+  .desktop-navigation {
+    padding-left: 28px;
+    padding-right: 20px;
+  }
+
+  .desktop-navigation__links {
+    gap: 25px;
+  }
+
+  .navigation-link {
+    font-size: 12px;
+  }
+
+  .desktop-navigation__actions {
+    gap: 20px;
+  }
+
+  .navigation-contact {
+    min-width: 120px;
+    height: 42px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .site-header {
+    height: 68px;
+  }
+
+  .site-header__container {
+    padding: 0 18px;
+  }
+
+  .site-logo {
+    width: auto;
+    flex: 1;
+
+    padding-left: 0;
+
+    border-right: 0;
+
+    font-size: 22px;
+  }
+
+  .desktop-navigation {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-navigation {
+    top: 68px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .site-header__container {
+    padding: 0 16px;
+  }
+
+  .site-logo {
+    font-size: 20px;
+  }
+
+  .mobile-menu-button {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  white-space: nowrap;
+}
+
+.availability-badge__dot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 8px;
+
+  border-radius: 50%;
+
+  background: var(--success);
+
+  box-shadow:
+    0 0 8px
+    rgba(34, 197, 94, 0.45);
+}
+
+.availability-badge__label {
+  color: var(--text-secondary);
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.15px;
+}
