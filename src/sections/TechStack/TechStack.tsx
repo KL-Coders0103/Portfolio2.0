@@ -11,6 +11,7 @@ import {
 import { motion } from 'framer-motion'
 
 import { techStackData, type TechCategory } from '../../config/techStack'
+import { getTechIcon } from '../../lib/techIcons'
 
 import './tech-stack.css'
 
@@ -24,28 +25,6 @@ const categoryIcons = {
   TechCategory['id'],
   typeof Layers3
 >
-
-const technologyMarks: Record<string, string> = {
-  react: 'R',
-  'react-native': 'RN',
-  typescript: 'TS',
-
-  node: 'N',
-  nestjs: 'N',
-  express: 'EX',
-
-  postgresql: 'PG',
-  mongodb: 'M',
-  prisma: 'P',
-
-  docker: 'D',
-  redis: 'R',
-  firebase: 'F',
-
-  'ai-apis': 'AI',
-  'machine-learning': 'ML',
-  'local-ai': 'AI',
-}
 
 export function TechStack() {
   return (
@@ -273,9 +252,13 @@ export function TechStack() {
                         className="technology-card"
                       >
                         <div className="technology-card__icon">
-                          {technologyMarks[
-                            technology.id
-                          ] ?? (
+                          {getTechIcon(technology.id) ? (
+                            <img
+                              src={getTechIcon(technology.id)}
+                              alt=""
+                              aria-hidden="true"
+                            />
+                          ) : (
                             <Icon size={28} />
                           )}
                         </div>
