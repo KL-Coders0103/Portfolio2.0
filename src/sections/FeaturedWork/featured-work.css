@@ -1,8 +1,6 @@
 .featured-work {
   position: relative;
-
-  min-height: 100svh;
-
+  min-height: auto;
   overflow: hidden;
 
   background: var(--background);
