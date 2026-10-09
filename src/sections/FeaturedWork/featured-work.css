@@ -42,7 +42,7 @@
 
   margin-inline: auto;
 
-  padding-top: 38px;
+  padding-top: var(--section-padding-y);
 }
 
 .featured-work__eyebrow {
