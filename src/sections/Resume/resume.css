@@ -1122,8 +1122,7 @@
 
   .resume__intro {
     padding-top: 0;
-
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 
   .resume__title {
