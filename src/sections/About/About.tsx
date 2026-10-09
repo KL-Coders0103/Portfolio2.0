@@ -11,7 +11,7 @@ import {
   Users,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-
+import profileImage from '../../assets/images/profile/profile.webp'
 import { aboutData } from '../../config/about'
 
 import './about.css'
@@ -170,8 +170,10 @@ export function About() {
           </div>
 
           <div className="about__visual-person">
-            <div className="about__person-head" />
-            <div className="about__person-body" />
+            <img
+              src={profileImage}
+              alt="Profile portrait"
+            />
           </div>
 
           <div className="about__visual-orbit about__visual-orbit--one" />
