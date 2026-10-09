@@ -58,7 +58,7 @@
 
   z-index: 4;
 
-  padding-top: 42px;
+  padding-top: var(--section-padding-y);
 }
 
 .lab__eyebrow {
