@@ -1,8 +1,6 @@
 .lab {
   position: relative;
-
-  min-height: 100svh;
-
+  min-height: auto;
   overflow: hidden;
 
   background: var(--background);
@@ -60,7 +58,7 @@
 
   z-index: 4;
 
-  padding-top: 42px;
+  padding-top: 0;
 }
 
 .lab__eyebrow {
@@ -791,7 +789,7 @@
   }
 
   .lab__hero-main {
-    padding-top: 30px;
+    padding-top: 0;
   }
 
   .lab__title {
@@ -925,4 +923,10 @@
   .lab-card__technologies {
     max-width: 180px;
   }
+}
+
+/* Shared outer section spacing token */
+.lab {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

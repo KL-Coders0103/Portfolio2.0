@@ -46,7 +46,7 @@
     .8fr
     1.7fr;
 
-  min-height: 380px;
+  min-height: auto;
 
   border-bottom: 1px solid var(--border);
 }
@@ -56,7 +56,7 @@
 
   z-index: 4;
 
-  padding-top: 42px;
+  padding-top: 0;
 
   border-right: 1px solid var(--border);
 }
@@ -868,7 +868,7 @@
   }
 
   .experience__intro {
-    padding-top: 30px;
+    padding-top: 0;
   }
 
   .experience__title {
@@ -1016,4 +1016,10 @@
 
     font-size: 8px;
   }
+}
+
+/* Shared outer section spacing token */
+.experience {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

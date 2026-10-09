@@ -61,7 +61,7 @@
 
   z-index: 5;
 
-  padding-top: 42px;
+  padding-top: 0;
 }
 
 .about__eyebrow {
@@ -1012,7 +1012,7 @@
   }
 
   .about__intro {
-    padding-top: 30px;
+    padding-top: 0;
   }
 
   .about__title {
@@ -1148,4 +1148,10 @@
 
     font-size: 8px;
   }
+}
+
+/* Shared outer section spacing token */
+.about {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

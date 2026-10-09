@@ -110,10 +110,7 @@
 
   gap: 30px;
 
-  padding:
-    92px
-    0
-    55px;
+  padding: 0;
 }
 
 
@@ -920,10 +917,7 @@
 
     grid-template-columns: 1fr;
 
-    padding:
-      100px
-      0
-      50px;
+    padding: 0;
   }
 
   .hero-content {
@@ -1161,4 +1155,10 @@
   .hero *::after {
     animation: none !important;
   }
+}
+
+/* Shared outer section spacing token */
+.hero {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

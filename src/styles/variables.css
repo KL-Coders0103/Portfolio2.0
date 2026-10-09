@@ -21,15 +21,14 @@
 
   --container-max: 1440px;
 
-  /* Existing horizontal system */
+  /* Shared page/container gutters */
   --page-padding-desktop: 48px;
   --page-padding-tablet: 32px;
   --page-padding-mobile: 20px;
 
-  /* New global vertical rhythm */
+  /* Shared vertical section rhythm */
   --section-padding-y: 96px;
   --section-padding-x: 48px;
-
   --section-gap-sm: 24px;
   --section-gap-md: 40px;
   --section-gap-lg: 64px;

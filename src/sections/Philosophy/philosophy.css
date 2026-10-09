@@ -1,7 +1,6 @@
 .philosophy {
   position: relative;
-  min-height: 100svh;
-
+  min-height: auto;
   overflow: hidden;
 
   background:
@@ -55,7 +54,7 @@
 
   margin-inline: auto;
 
-  padding-top: 42px;
+  padding-top: 0;
 
   display: grid;
 
@@ -530,7 +529,7 @@
   }
 
   .philosophy-container {
-    padding-top: 32px;
+    padding-top: 0;
   }
 
   .philosophy-eyebrow {
@@ -595,4 +594,10 @@
   .philosophy-title {
     font-size: 2.75rem;
   }
+}
+
+/* Shared outer section spacing token */
+.philosophy {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

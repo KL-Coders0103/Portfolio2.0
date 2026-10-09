@@ -1,8 +1,6 @@
 .metrics {
   position: relative;
-
-  min-height: 100svh;
-
+  min-height: auto;
   overflow: hidden;
 
   background: var(--background);
@@ -60,7 +58,7 @@
 
   z-index: 5;
 
-  padding-top: 42px;
+  padding-top: 0;
 }
 
 .metrics-eyebrow {
@@ -1119,4 +1117,10 @@
   .focus-row__label {
     font-size: 7px;
   }
+}
+
+/* Shared outer section spacing token */
+.metrics {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }

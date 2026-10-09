@@ -1,114 +1,54 @@
 /* =========================================================
-   GLOBAL SECTION SPACING SYSTEM
-========================================================= */
-
-:root {
-  --section-padding-y: 96px;
-  --section-padding-x: 48px;
-
-  --section-gap-sm: 24px;
-  --section-gap-md: 40px;
-  --section-gap-lg: 64px;
-}
-
-
-/* =========================================================
-   BASE SECTION
+   SHARED SECTION RHYTHM
+   Outer vertical spacing is consistent across page sections.
+   Inner panel/card spacing remains owned by each design.
 ========================================================= */
 
 .portfolio-section {
   position: relative;
-
   width: 100%;
-
-  padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
-
-  padding-left: var(--section-padding-x);
-  padding-right: var(--section-padding-x);
-
-  overflow: hidden;
+  padding-block: var(--section-padding-y);
+  padding-inline: var(--section-padding-x);
 }
-
-
-/* =========================================================
-   SECTION INNER
-========================================================= */
 
 .portfolio-section__inner {
   position: relative;
-
   width: 100%;
   max-width: var(--container-max);
-
   margin-inline: auto;
 }
-
-
-/* =========================================================
-   SECTION HEADER
-========================================================= */
 
 .section-header {
   margin-bottom: var(--section-gap-lg);
 }
 
-
-/* =========================================================
-   SECTION EYEBROW
-========================================================= */
-
 .section-eyebrow {
   display: flex;
   align-items: center;
-
   gap: 16px;
-
   margin-bottom: 24px;
-
   color: var(--text-secondary);
-
   font-family: var(--font-mono);
-
   font-size: 12px;
   font-weight: 500;
-
   letter-spacing: 2px;
-
   text-transform: uppercase;
 }
 
 .section-eyebrow::before {
   content: '';
-
   width: 30px;
   height: 2px;
-
   flex: 0 0 30px;
-
   background: var(--accent);
 }
 
-
-/* =========================================================
-   SECTION TITLE
-========================================================= */
-
 .section-title {
   margin: 0;
-
   color: var(--text-primary);
-
-  font-size: clamp(
-    48px,
-    5vw,
-    82px
-  );
-
+  font-size: clamp(48px, 5vw, 82px);
   font-weight: 800;
-
   line-height: 0.95;
-
   letter-spacing: -3px;
 }
 
@@ -116,104 +56,101 @@
   color: var(--accent);
 }
 
-
-/* =========================================================
-   SECTION DESCRIPTION
-========================================================= */
-
 .section-description {
   max-width: 680px;
-
   margin-top: 24px;
-
   color: var(--text-secondary);
-
   font-size: 17px;
-
   line-height: 1.6;
 }
-
-
-/* =========================================================
-   COMMON CONTENT SPACING
-========================================================= */
 
 .section-stack {
   display: flex;
   flex-direction: column;
-
   gap: var(--section-gap-md);
 }
 
 .section-grid {
   display: grid;
-
   gap: var(--section-gap-md);
 }
 
+/*
+ * Existing screens use custom class names and contain full-width
+ * technical panels. Shared spacing is applied to section roots
+ * without adding padding to nested panels.
+ */
+.hero,
+.philosophy,
+.metrics,
+.featured-work,
+.case-study,
+.tech-stack,
+.lab,
+.experience,
+.about,
+.resume,
+.github-section,
+.contact-section {
+  padding-block: var(--section-padding-y);
+}
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* The hero remains at least viewport-height and retains its stats strip. */
+.hero {
+  min-height: calc(100svh - 72px);
+}
+
+/* Footer has multiple full-width bands; its internals control their spacing. */
+.portfolio-footer {
+  padding-block: 0;
+}
+
+/* The fixed navigation is not part of section spacing. */
+.site-header {
+  padding-block: 0;
+}
 
 @media (max-width: 1023px) {
-
   :root {
     --section-padding-y: 72px;
     --section-padding-x: 32px;
-
     --section-gap-lg: 48px;
   }
-
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767px) {
-
   :root {
     --section-padding-y: 56px;
     --section-padding-x: 20px;
-
     --section-gap-sm: 18px;
     --section-gap-md: 28px;
     --section-gap-lg: 40px;
   }
 
-  .portfolio-section {
-    padding-top: var(--section-padding-y);
-    padding-bottom: var(--section-padding-y);
-  }
-
   .section-title {
-    font-size: clamp(
-      42px,
-      12vw,
-      62px
-    );
-
+    font-size: clamp(42px, 12vw, 62px);
     letter-spacing: -2px;
   }
 
   .section-description {
     font-size: 15px;
   }
-
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 390px) {
-
   :root {
     --section-padding-y: 48px;
     --section-padding-x: 16px;
   }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-section *,
+  .portfolio-section *::before,
+  .portfolio-section *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

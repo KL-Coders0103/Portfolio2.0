@@ -1,8 +1,6 @@
 .case-study {
   position: relative;
-
-  min-height: 100svh;
-
+  min-height: auto;
   overflow: hidden;
 
   background: var(--background);
@@ -42,7 +40,7 @@
 
   margin-inline: auto;
 
-  padding-top: 20px;
+  padding-top: 0;
 }
 
 .case-study__back a {
@@ -94,7 +92,7 @@
 
   z-index: 4;
 
-  padding-top: 42px;
+  padding-top: 0;
 }
 
 .case-study__eyebrow {
@@ -1041,4 +1039,10 @@
   .result-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Shared outer section spacing token */
+.case-study {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }
