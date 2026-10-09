@@ -46,7 +46,7 @@
     .8fr
     1.7fr;
 
-  min-height: 380px;
+  min-height: auto;
 
   border-bottom: 1px solid var(--border);
 }
