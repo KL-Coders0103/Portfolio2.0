@@ -540,6 +540,21 @@
   font-weight: 700;
 }
 
+.technology-card__icon img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  color: currentColor;
+  filter: grayscale(1) brightness(1.35);
+  transition: filter 200ms ease, transform 200ms ease;
+}
+
+.technology-card:hover .technology-card__icon img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.05);
+}
+
 .technology-card span {
   color: var(--text-secondary);
 
